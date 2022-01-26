@@ -32,7 +32,7 @@
             </button>
             <% } %>
         </div>
-        <div class="card mb-3">
+        <div class="card shadow mb-3">
             <div class="card-body">
                 <h5 class="card-title"><%= campground.title %></h5>
                 <p class="card-text"><%= campground.description %></p>
@@ -43,7 +43,7 @@
             </ul>
             <% if (user && campground.author.equals(user._id)) { %>
             <div class="card-body">
-                <a href="/campgrounds/<%= campground.id %>/edit" class="card-link btn btn-primary"
+                <a href="/campgrounds/<%= campground.id %>/edit" class="card-link btn btn-secondary"
                     >Edit <%= campground.title %> Campground
                 </a>
             </div>
@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="col-6">
-        <div id="map"></div>
+        <div class="shadow" id="map"></div>
         <% if (user && !campground.reviews.some(review => review.author.equals(user._id))) { %>
         <form
             action="/campgrounds/<%= campground.id %>/review"
@@ -61,7 +61,7 @@
             novalidate
             class="validated-form mb-3"
         >
-            <h2>Leave a Review</h2>
+            <h2 class="my-3">Leave a Review</h2>
             <div class="mb-3">
                 <fieldset class="starability-basic">
                     <legend>Rating:</legend>
@@ -98,12 +98,12 @@
                 ></textarea>
                 <div class="invalid-feedback">Please write a review before submitting.</div>
             </div>
-            <button class="btn btn-primary">Submit</button>
+            <button class="btn btn-secondary">Submit</button>
         </form>
         <% } %> <% if (campground.reviews.length) { %>
-        <h1>Reviews</h1>
+        <h1 class="my-4">Reviews</h1>
         <% } %> <% campground.reviews.forEach(review => { %>
-        <div class="card mb-3">
+        <div class="card shadow mb-3">
             <div class="card-body">
                 <h5 class="card-title"><%= review.author.username %></h5>
                 <p class="starability-result" data-rating="<%= review.rating %>"></p>
