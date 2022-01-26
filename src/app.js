@@ -5,7 +5,7 @@ import { PORT } from './utils/config.js'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import methodOverride from 'method-override'
-import morgan from 'morgan'
+// import morgan from 'morgan'
 import ejsMate from 'ejs-mate'
 import ExpressError from './utils/ExpressError.js'
 import campgroundsRoutes from './routes/campgrounds.js'
@@ -34,7 +34,7 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, '../public')))
 app.use(methodOverride('_method'))
-app.use(morgan('dev'))
+// app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }))
 app.use(flash())
 app.use(mongoSanitize())
