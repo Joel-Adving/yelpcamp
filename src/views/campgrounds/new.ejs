@@ -1,0 +1,40 @@
+<% layout("./layouts/boilerplate") %>
+
+<div class="row">
+    <h1 class="text-center">New campground</h1>
+    <div class="col-6 offset-3 mt-4">
+        <form method="post" action="/campgrounds" novalidate class="validated-form" enctype="multipart/form-data">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" required type="text" name="campground[title]" id="title" />
+            <label class="form-label mt-3" for="location">Location</label>
+            <input class="form-control" required type="text" name="campground[location]" id="location" />
+            <!-- <label class="form-label mt-3" for="image">Image URL</label>
+            <input class="form-control" required type="text" name="campground[image]" id="image" /> -->
+            <label class="form-label mt-3" for="price">Price</label>
+            <div class="input-group">
+                <span class="input-group-text" id="price-label">$</span>
+                <input
+                    class="form-control"
+                    required
+                    step="0.01"
+                    type="number"
+                    name="campground[price]"
+                    id="price"
+                    placeholder="0.00"
+                />
+            </div>
+            <label class="form-label mt-3" for="description">Description</label>
+            <textarea
+                required
+                class="form-control"
+                type="text"
+                name="campground[description]"
+                id="description"
+            ></textarea>
+            <label class="form-label mt-3" for="image">Add Image(s)...</label>
+            <input class="form-control" type="file" name="image" multiple id="image" />
+            <button class="btn btn-success my-4 mb-3">Add Campground</button>
+        </form>
+        <a href="/campgrounds" class="">All Campgrounds</a>
+    </div>
+</div>
