@@ -4,9 +4,9 @@ YelpCamp is a web app for viewing, adding and reviewing campgrounds
 
 ## Architecture / Tech Stack
 
-Core: Node, Express 
+Core: Node, Express, Mongoose
 
-Database: MongoDB, Mongoose
+Database: MongoDB
 
 Authentication: Passport
 
