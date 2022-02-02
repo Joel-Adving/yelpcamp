@@ -12,8 +12,6 @@ Authentication: Passport
 
 Templating language: Ejs
 
-Css: Sass
-
 ## Installation
 
 ```bash
