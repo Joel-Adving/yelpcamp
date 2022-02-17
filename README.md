@@ -2,7 +2,7 @@
 
 YelpCamp is a web app for viewing, adding and reviewing campgrounds 
 
-https://pacific-falls-25206.herokuapp.com/
+https://yelpcamp.oki.desi/
 
 ## Architecture / Tech Stack
 
