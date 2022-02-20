@@ -2,7 +2,7 @@
 
 YelpCamp is a web app for viewing, adding and reviewing campgrounds 
 
-https://yelpcamp.oki.desi/
+https://yelpcamp.joel.cyou/
 
 ## Architecture / Tech Stack
 
